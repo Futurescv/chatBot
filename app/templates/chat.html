@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GPT-3 Chat</title>
+  </head>
+  <body>
+    <h1>GPT-3 Chat</h1>
+    <form method="post">
+      <input type="text" name="message">
+      <input type="submit" value="Submit">
+    </form>
+    {% for item in conversation %}
+      <p>{{ item.time }}</p>
+      <p>You: {{ item.input }}</p>
+      <p>GPT-3: {{ item.output }}</p>
+      <hr>
+    {% endfor %}
+  </body>
+</html>
+
