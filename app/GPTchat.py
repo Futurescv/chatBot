@@ -1,5 +1,4 @@
 import openai
-import re
 
 
 # Initialize the OpenAI API key
