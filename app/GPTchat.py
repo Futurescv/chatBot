@@ -28,7 +28,7 @@ def chat_method():
 def chat():
     message = request.form['message']
 
-    openai.api_key = "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"
+    openai.api_key = "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"
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt='你: ' + message,
