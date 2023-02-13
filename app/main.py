@@ -11,7 +11,7 @@ def hello_world():
 
 
 @app.route('/test')
-def hello_world():
+def hello_world_test():
     return '欢迎使用微信云托管test！'
 
 
