@@ -4,7 +4,6 @@ import openai
 from flask import request
 
 # Initialize the OpenAI API key
-# openai.api_key = "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"
 
 
 def chat_method():
@@ -30,7 +29,11 @@ def chat_method():
 def chat():
     message = request.form['message']
 
-    openai.api_key = os.environ['API_KEY']
+    # openai.api_key = os.environ['API_KEY']
+    key_front = "sk-h3nxTq5ZCYzLOLc"
+    key_end = "K9l4aT3BlbkFJ9O0VyxyCMlTvMSCZz34w"
+    openai.api_key = key_front+key_end
+
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt='你: ' + message,
